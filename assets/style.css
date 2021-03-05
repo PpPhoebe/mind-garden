@@ -1,0 +1,63 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+.canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Main Page */
+.text-container {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+}
+.external-links {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+.link-button {
+  padding: 8px 15px;
+  background-color: yellow;
+  text-decoration: none;
+}
+.symbol-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.symbol {
+  padding: 20px;
+  cursor: pointer;
+  transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.symbol:hover {
+  transform: scale(1.3) rotate(20deg);
+}
+.symbol img {
+  width: 100%;
+}
+.sun-symbol {
+  width: 300px;
+}
+.cloud-symbol {
+  width: 300px;
+}
+.lightning-symbol {
+  width: 200px;
+}
+/* Sun Page */
+
+/* Cloud Page */
+
+/* Lightning Page */
