@@ -1,12 +1,33 @@
 body {
   height: 100vh;
   width: 100vw;
+  margin: 0;
   font-family: 'Gloria Hallelujah', cursive;
 }
 .canvas {
   position: relative;
+  overflow: hidden;
   width: 100%;
   height: 100%;
+}
+.prev {
+  position: absolute;
+  z-index: 99;
+  left: 20px;
+  top: 20px;
+}
+.main {
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+}
+.next {
+  position: absolute;
+  z-index: 99;
+  right: 20px;
+  top: 20px;
 }
 
 
@@ -25,8 +46,15 @@ body {
 }
 .link-button {
   padding: 8px 15px;
-  background-color: yellow;
+  background-color: #e5e6e7;
   text-decoration: none;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.link-button:hover {
+  background-color: #f3f3f3;
 }
 .symbol-container {
   width: 100%;
@@ -57,7 +85,302 @@ body {
   width: 200px;
 }
 /* Sun Page */
+.sun-ground {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1000px;
+}
+.sun-ground__first-row {
+  
+}
+.sun-ground__flower {
+  position: absolute;
+}
+.sun-ground__flower.reverse {
+  transform: scaleX(-1);
+}
+.sun-ground__flower.size-tiny {
+  width: 100px;
+}
+.sun-ground__flower.size-small {
+  width: 200px;
+}
+.sun-ground__flower.size-medium {
+  width: 300px;
+}
+.sun-ground__flower img {
+  width: 100%;
+}
+.sun-sun { 
+  position: absolute;
+	top:20%;
+	left:50%;
+  transform: translateX(-50%);	
+	width:70px;
+	height:70px;
+	border-radius:50%;	
+	background:rgb(252, 212, 64);
+	opacity:0.9;			
+	box-shadow: 0px 0px 40px 15px rgba(252, 212, 64, 0.5);  
+}
 
+.ray_box {
+  position: absolute;
+  margin: auto;
+	top:0px;
+	left:0;
+	right:0;
+	bottom:0;	
+  width:70px;  
+  -webkit-animation: ray_anim 10s linear infinite;
+  animation: ray_anim 10s linear infinite;
+}
+.ray {  
+    background: -webkit-linear-gradient(top, rgba(252, 212, 64,0.3) 0%, rgba(252, 212, 64,1) 50%, rgba(252, 212, 64,0) 100%);
+		background: linear-gradient(top, rgba(252, 212, 64,0.3) 0%, rgba(252, 212, 64, 1) 50%, rgba(252, 212, 64,0) 100%); 
+    margin-left:10px;
+    border-radius:80% 80% 0 0;
+    position:absolute;
+    opacity:0.1;
+}
+
+.ray1 {    
+    height:170px;
+    width:30px;
+   -webkit-transform: rotate(180deg);
+    top:-175px;
+    left: 15px;
+}
+.ray2 {
+    height:100px;
+    width:8px;
+   -webkit-transform: rotate(220deg);
+    top:-90px;
+    left: 75px;
+}
+.ray3 {
+    height:170px;
+    width:50px;
+   -webkit-transform: rotate(250deg);
+    top:-80px;
+    left: 100px;
+}
+.ray4 {
+    height:120px;
+    width:14px;
+   -webkit-transform: rotate(305deg);
+    top:30px;
+    left: 100px;
+}
+.ray5 {
+    height:140px;
+    width:30px;
+   -webkit-transform: rotate(-15deg);
+    top:60px;
+    left: 40px;
+}
+.ray6 {
+    height:90px;
+    width:50px;
+   -webkit-transform: rotate(30deg);
+    top:60px;
+    left: -40px;
+}
+.ray7 {
+    height:180px;
+    width:10px;
+   -webkit-transform: rotate(70deg);
+    top:-35px;
+    left: -40px;
+}
+.ray8 {
+    height:120px;
+    width:30px;
+   -webkit-transform: rotate(100deg);
+    top:-45px;
+    left:-90px;
+}
+.ray9 {
+    height:80px;
+    width:10px;
+   -webkit-transform: rotate(120deg);
+    top:-65px;
+    left:-60px;
+}
+.ray10 {
+    height:190px;
+    width:23px;
+   -webkit-transform: rotate(150deg);
+    top:-185px;
+    left: -60px;
+}
+
+
+@-webkit-keyframes ray_anim { 
+		0% { -webkit-transform: rotate(0deg); transform: rotate(0deg);}    
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+}
 /* Cloud Page */
+.cloud-ground {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1000px;
+}
+.cloud-ground__first-row {
+  
+}
+.cloud-ground__flower {
+  position: absolute;
+}
+.cloud-ground__flower.reverse {
+  transform: scaleX(-1);
+}
+.cloud-ground__flower.size-tiny {
+  width: 100px;
+}
+.cloud-ground__flower.size-small {
+  width: 200px;
+}
+.cloud-ground__flower.size-medium {
+  width: 300px;
+}
+.cloud-ground__flower img {
+  width: 100%;
+}
+.cloud-cloud {
+  position: absolute;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+.cloud-cloud img {
+  width: 100%;
+}
 
 /* Lightning Page */
+.lightning-ground {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1000px;
+}
+.lightning-ground__first-row {
+  
+}
+.lightning-ground__flower {
+  position: absolute;
+}
+.lightning-ground__flower.reverse {
+  transform: scaleX(-1);
+}
+.lightning-ground__flower.down {
+  transform: rotate(180deg);
+}
+.lightning-ground__flower.down-reverse {
+  transform: rotate(180deg) scaleX(-1);
+}
+
+.lightning-ground__flower.size-tiny {
+  width:50px;
+}
+.lightning-ground__flower.size-small {
+  width: 200px;
+}
+.lightning-ground__flower.size-medium {
+  width: 300px;
+}
+.lightning-ground__flower img {
+  width: 100%;
+}
+.lightning-cloud {
+  position: absolute;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+.lightning-cloud img {
+  width: 100%;
+}
+
+
+
+
+
+
+
+/* Effect */
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.flashit{
+-webkit-animation: flash ease-out 7s infinite;
+-moz-animation: flash ease-out 7s infinite;
+animation: flash ease-out 7s infinite;
+animation-delay: 2s;
+}
+
+@-webkit-keyframes flash {
+	from { opacity: 1; } 
+  92% { opacity: 0; }
+	93% { opacity: 0.6; }
+  94% { opacity: 0.2; }
+  96% { opacity: 0.9; } 
+	to { opacity: 0; }
+}
+
+@keyframes flash {
+	from { opacity: 1; } 
+    92% { opacity: 0; }
+	93% { opacity: 0.6; }
+    94% { opacity: 0.2; }
+    96% { opacity: 1; } 
+	to { opacity: 0; }
+}
+.rain-effect { 
+  position: relative; 
+  width: 100%; 
+  height: 100vh; 
+  background-size: cover; 
+  background-position: center; 
+  animation-delay: 1s; 
+} 
+.rain-effect:before { 
+  content: ""; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-image: url( 
+https://media.geeksforgeeks.org/wp-content/uploads/20200828184719/rain-300x300.png); 
+  animation: rain 0.4s linear infinite; 
+  opacity: 0; 
+} 
+@keyframes rain { 
+  0% { 
+      background-position: 0 0; 
+      opacity: 1; 
+  } 
+
+  100% { 
+      background-position: 8% 80%; 
+      opacity: 1; 
+  } 
+} 
