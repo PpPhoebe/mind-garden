@@ -87,11 +87,22 @@ body {
 /* Sun Page */
 .sun-ground {
   position: absolute;
+  height: 300px;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   max-width: 1000px;
+}
+.sun-word {
+  display: none;
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sun-ground:hover .sun-word {
+  display: block;
 }
 .sun-ground__first-row {
   
@@ -231,6 +242,18 @@ body {
   transform: translateX(-50%);
   width: 100%;
   max-width: 1000px;
+  height: 400px;
+}
+
+.cloud-word {
+  display: none;
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.cloud-ground:hover .cloud-word {
+  display: block;
 }
 .cloud-ground__first-row {
   
@@ -270,6 +293,18 @@ body {
   transform: translateX(-50%);
   width: 100%;
   max-width: 1000px;
+  height: 400px;
+}
+
+.lightning-word {
+  color: white;
+  position: absolute;
+  top: -300px;
+  left: 52%;  
+  transform: translateX(-50%);
+}
+.lightning-ground:hover .lightning-word {
+  display: block;
 }
 .lightning-ground__first-row {
   
